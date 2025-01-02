@@ -4,7 +4,7 @@
 """
 
 import networkx as nx
-import matplotliЬ.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Создание графа
 G = nx.Graph()

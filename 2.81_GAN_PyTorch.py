@@ -9,7 +9,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
-from torchvision.datasets import МNIST
+from torchvision.datasets import MNIST
 
 # Определение генератора
 class Generator(nn.Module):
@@ -23,13 +23,13 @@ class Generator(nn.Module):
             nn.Linear(latent_dim, 128),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Linear(128, 256),
-            nn.BatchNormld(256),
+            nn.BatchNorm1d(256),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Linear(256, 512),
-            nn.BatchNormld(512),
+            nn.BatchNorm1d(512),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Linear(512, 1024),
-            nn.BatchNormld(1024),
+            nn.BatchNorm1d(1024),
             nn.LeakyReLU(0.2, inplace=True),
             nn.Linear(1024, image_shape),
             nn.Tanh()
